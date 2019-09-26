@@ -1,6 +1,3 @@
-//Classe Modelo que Representa a Tabela na BD - Entidade
-//Nas classes modelos os get e set e o hash code imperam
-
 package com.claudiobraga.fiservnenaghopportunity.model;
 
 import java.math.BigDecimal;
@@ -14,16 +11,16 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-//Fazer a vinculação da classe com a tabela de Dados
-@Entity //entidade JPA = representa uma tabela na BD
+
+@Entity
 public class Opportunity {
 	
 	
-	@Id//Anotação para Identificar o id chave primária
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//usar a geração de identidade-autoincre
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	//Anotações para validações-Bean Validation
+	
 	@NotNull
 	@Size(max = 50)
 	@Column(name = "name_Of_The_Company")
